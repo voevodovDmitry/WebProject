@@ -36,11 +36,6 @@ function deleteEvent(button) {
 	event.remove();
 }
 
-function addCollum(){
-	
-	
-	
-}
 
 
 

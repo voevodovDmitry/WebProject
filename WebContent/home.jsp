@@ -8,17 +8,21 @@
 		<meta charset="UTF-8">
 		<title>Home page</title>
 		<script type="text/javascript" src='<c:url value="/js/main.js"/>'></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	</head>
-	<body>
+	<body id="home">
 		<header>
 			<jsp:include page="/header.jsp"/>
 		</header>
-		<h2>Hello ${user.login}</h2>
-		<p>Your name: ${user.name}</p>
-		<p>Your surname: ${user.surname}</p>
-		<p>Your email: ${user.email}</p>
+		<div class="d-flex justify-content-center flex-column m-2">
+		<div>
+		<h2>Personal info:</h2>
+		<p>Name: ${user.name}</p>
+		<p>Surname: ${user.surname}</p>
+		<p>Email: ${user.email}</p>
 		
-		<h3>Conferences</h3>
+		<h2>Conferences</h2>
+		
 		<jsp:include page="/viewConf.jsp"/>
 		
 		<table>
@@ -35,5 +39,13 @@
 		<form id="operationForm" method="post" action='<c:url value="/operation"/>'>
 			<input type="hidden" name="<%= Constants.OPERATION_LABEL %>">
 		</form>
+		</div>
+		</div>
+		<script>
+		  const buttonGoToHomePage = document.getElementById('buttonGoToHomePage');
+		  const buttonGoToMyConfereces = document.getElementById('buttonGoToMyConfereces');
+		  buttonGoToHomePage.classList.remove('d-none');
+		  buttonGoToMyConfereces.classList.add('d-none');
+		</script>
 	</body>
 </html>

@@ -8,6 +8,7 @@
 		<meta charset="UTF-8">
 		<title>New conference page</title>
 		<script type="text/javascript" src='<c:url value="/js/main.js"/>'></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	</head>
 	<body>
 		<h2>New Conference</h2>
@@ -25,7 +26,7 @@
 				<input type="time" name="<%= Constants.TIMES_LABEL %>" placeholder="Time" required> <br><br>
 			</div>
 		</form>
-		<p><a href="JavaScript:addEvent()">Add avent</a></p>
+		<p><a href="JavaScript:addEvent()">Add event</a></p>
 		<input type="submit" value="Create conference" form="newConfForm">
 		
 	</body>

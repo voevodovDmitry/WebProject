@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib uri="/WEB-INF/c.tld" prefix="c" %>
-<table border="1">
+<div class="d-flex justify-content-center">
+<table class="table table-bordered mt-4 w-50">
 	<tr>
 		<th>Title</th>
 		<th>Place</th>
@@ -22,3 +23,4 @@
 			</tr>
 		</c:forEach>
 </table>
+</div>
