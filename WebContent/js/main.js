@@ -1,4 +1,5 @@
 function sendMenuForm(section) {
+	console.log('sendMenuForm');
 	let form = document.getElementById('menuForm');
 	form.section.value = section;
 	form.submit();
@@ -15,10 +16,11 @@ function addEvent() {
 	let newEvent = event.cloneNode(true);
 	newEvent.id = '';
 	let childs = newEvent.children;
-	Console(childs);
 	childs[0].value = '';
-	childs[2].value = '';
+	childs[1].value = '';
+	childs[0].classList.add('mt-5');
 	let deleteButton = getDeleteButton();
+	deleteButton.classList.add('btn', 'btn-danger', 'mt-4');
 	newEvent.append(deleteButton);
 	newConfForm.append(newEvent);
 }

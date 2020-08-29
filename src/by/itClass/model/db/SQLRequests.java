@@ -35,7 +35,7 @@ public final class SQLRequests {
 											+ "left join events on confevents.idEvent=events.id "
 											+ "where conferences.id=? and conferences.idUser=(select users.id from users where users.id=?)";
 	
-	public static final String DONE_CONF = "update conferences set state=1 where conferences.id=? and conferences.idUser=(select id from users where users.id=?)";
+	public static final String DONE_CONF = "update conferences set state= -(state) where conferences.id=? and conferences.idUser=(select id from users where users.id=?)";
 	
 	public static final String ID_COL = "id";
 	
