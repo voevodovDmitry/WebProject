@@ -37,14 +37,3 @@ function deleteEvent(button) {
 	let event = button.target.parentElement;
 	event.remove();
 }
-
-
-
-
-
-
-
-
-
-
-
