@@ -2,6 +2,11 @@ package by.itClass.model.db;
 
 public final class SQLRequests {
 	public static final String SELECT_USER = "select * from users where login=? and password=?";
+	
+	public static final String ADD_USER = "insert into `itclass_po44`.`users` (`login`,`password`,`name`,`surname`,`email`)" +
+			"VALUES ( ?, ?, ?, ?, ?);";
+
+	
 	public static final String SELECT_EVENTS = "select * from events "
 												+ "join confevents on events.id=idEvent "
 												+ "where idConf=?";
@@ -30,7 +35,7 @@ public final class SQLRequests {
 											+ "left join events on confevents.idEvent=events.id "
 											+ "where conferences.id=? and conferences.idUser=(select users.id from users where users.id=?)";
 	
-	public static final String DONE_CONF = "update conferences set state=1 where conferences.id=? and conferences.idUser=(select id from users where users.id=?)";
+	public static final String DONE_CONF = "update conferences set state= -(state) where conferences.id=? and conferences.idUser=(select id from users where users.id=?)";
 	
 	public static final String ID_COL = "id";
 	
